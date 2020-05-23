@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Inicio de Sesión</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <img class="icon" src="assets/icon/login.png" alt="" >
+  <ion-item class="transparent-item">
+    <ion-label position="floating"> Correo</ion-label>
+    <ion-input type="text" [(ngModel)]="email" name="email"></ion-input>
+  </ion-item>
+  <ion-item class="transparent-item">
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+  </ion-item>
+  <br>
+  <ion-button (click)="OnSubmitLogin()" color="#8100c3" expand="block" fill="outline">Entrar</ion-button>
+  <div padding  align="center">
+      <br *ngIf="!show">
+    <ion-spinner color="light" *ngIf="show" position="floating"></ion-spinner>
+    </div>
+  <ion-item class="transparent-item">
+    <ion-label>Elige tu Usuario...</ion-label>
+    <ion-select [(ngModel)]="user" (ionChange)="autocomplete(user)" okText="Aceptar"
+    cancelText="Cancelar">
+      <ion-select-option color="success" value="admin" slot="start">Admin</ion-select-option>
+      <ion-select-option class="transparent-item" value="invitado" color="success" (ionSelect)="autocomplete('invitado')" slot="start">Invitado</ion-select-option>
+      <ion-select-option class="transparent-item" value="cristian" color="success" (ionSelect)="autocomplete('cristian')" slot="start">Cristian</ion-select-option>
+      <ion-select-option class="transparent-item" value="aitu" color="success" (ionSelect)="autocomplete('aitu')" slot="start">Aitana</ion-select-option>
+      <ion-select-option class="transparent-item" value="tester" color="success" (ionSelect)="autocomplete('tester')" slot="start">Tester</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  
+  </ion-content>
+  

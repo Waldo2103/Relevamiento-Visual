@@ -1,0 +1,37 @@
+<ion-content>
+  <div>
+      <ion-button (click)="Lindas()" color="secondary">
+        <ion-icon slot="start" *ngIf="!show" name="happy"></ion-icon>
+        <ion-spinner color="light" *ngIf="show" position="floating"></ion-spinner>
+        <br>COSAS LINDAS</ion-button>
+      <br>
+      <ion-fab vertical="center" horizontal="center" slot="fixed">
+          
+      </ion-fab>
+      <ion-button (click)="Feas()" color="danger">
+          <ion-icon slot="start" name="sad"></ion-icon>
+          COSAS FEAS
+        </ion-button>
+  </div>
+</ion-content>
+
+<!--ion-content padding>
+  <div class="flex-v buttons-container">
+    <div class="height-50 big-button-container big-button-container-first">
+      <div class="flex-v center-horizontal center-vertical height-100" (click)="cosasLindasClick()">
+        <div>
+          <ion-icon name="heart"></ion-icon>
+        </div>
+        <div class="text-title">Cosas Lindas del Edificio</div>
+      </div>
+    </div>
+    <div class="height-50 big-button-container big-button-container-second">
+      <div class="flex-v center-horizontal center-vertical height-100" (click)="cosasFeasClick()">
+        <div>
+          <ion-icon name="logo-snapchat"></ion-icon>
+        </div>
+        <div class="text-title">Cosas Feas del Edificio</div>
+      </div>
+    </div>
+  </div>
+</ion-content-->
